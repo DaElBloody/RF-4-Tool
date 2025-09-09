@@ -38,9 +38,9 @@ ListFish:="Aal|Aland|Albino-Gerahmter-Spiegelkarpfen|Albino-Lederkarpfen|Albino-
 Listwaters:="Moskito-See|Elk-Lake|Windenbach|Alte-Festung|Fluss-Belaja|Kuori|Bärensee|Wolchow|Siwerskyj-Donez|FlussSura|Ladogasee|Bernsteinsee|Ladoga-Archipel|Achtuba|Kupfersee|Untere-Tunguska|Fluss-Jama"
 
 if(!FileExist("config.ini"))
-	FileAppend, [Info]`nVersion=1.0 `n[User]`nName=""`nID=""`n[Discord]`nHook="", version.ini
+	FileAppend, [Info]`nVersion=0.2 `n[User]`nName=""`nID=""`n[Discord]`nHook="", config.ini
 
-IniRead, UName, versconfigion.ini, User, Name
+IniRead, UName, config.ini, User, Name
 IniRead, UID, config.ini, User, ID
 If (UName == "")
 {
@@ -73,7 +73,7 @@ If (UName == "")
 		IniWrite, %UserInput%, config.ini,Discord, Hook
 		sleep 100
 	}
-
+	Reload
 }
 
 cords:=""
