@@ -37,7 +37,6 @@ SetTimer,timenow,500
 ListFish:="Aal|Aland|Albino-Gerahmter-Spiegelkarpfen|Albino-Lederkarpfen|Albino-Schuppenkarpfen|Albino-Spiegelkarpfen|Albino-Wels|Albino-Zeilkarpfen|Amurwels|Aral-Barbe|Arktische-Äsche|Arktische-Maräne|Atlantischer-Lachs|Bachforelle|Bachsaibling|Bachschmerle|Baikal-Maräne|Baltischer-Stör|Barbe|Barsch|Beluga-Stör|Brachse|Braschnikow-Hering|Buckellachs|Chereshnev-Saibling|Döbel|Dolly-Varden-Forelle|Donauhering|Don-Kaulbarsch|Dreistachliger-Stichling|Dryagin-Saibling|Europäische-Äsche|Fernöstliches-Neunauge|Fluss---Wandermuschel|Flusskrebs|Flussmuschel|Geister-Zeilkarpfen|Geister-Gerahmter-Spiegelkarpfen|Geister-Lederkarpfen|Geister-Schuppenkarpfen|Geister-Spiegelkarpfen|Gerahmter-Spiegelkarpfen|Giebel|Glatt-Stör|Goldener-Spiegelkarpfen|Goldkarpfen|Goldschleie|Grasfrosch|Große-Bodenrenke|Großmäuliger-Büffelfisch|Gründling|Güster|Hasel|Hecht|Japanischer-Saibling|Jungbrachse|Kaluga-Hausen|Kamtschatka-Regenbogenforelle|Karausche|Kaspi-Maifisch|Kaspineunauge|Kaspische-Forelle|Kaspischer-Schwarzrücken-Hering|Kaulbarsch|Keine-Daten-verfügbar|Keta-Lachs|Kleine-Bodenrenke|Kleine-Sibirische-Maräne|Klotzsaibling|Königslachs|Kuori-Felchen|Kürbiskernbarsch|Kutum|Ladoga-Lachs|Ladogasee-Felchen|Ladoga-Stör|Langnasen-Saugdöbel|Laube|Lederkarpfen|Lenok|Ludoga-Renke|Ludoga-Saibling|Marmorkarpfen|Muksun|Nase|Neiva|Nelma|Neunstachliger-Stichling|Ostbrasse|Ostsibirische-Äsche|Pazifisches-Neunauge|Peledmaräne|Persischer-Stör|Prosopium|Quappe|Rapfen|Regenbogenforelle|Regenbogenstint|Ripus-Maräne|Rotauge|Rotfeder|Rotlachs|Russischer-Stör|Scherg|Schläfergrundel|Schlammpeitzger|Schleie|Schuppenkarpfen|Schwarze-Felchen|Schwarzer-Amur|Schwarzer-Büffelfisch|Schwarzmeer-Beluga|Schwarzmeer-Kutum|Schwarzmeer-Seelaube|See-Elritze|Seeforelle|Seelaube|Seesaibling|Seesaibling-Kuorsky|Sewan-Forelle|Sibirische-Groppe|Sibirische-Plötze|Sibirischer-Gründling|Sibirischer-Hasel|Sibirischer-Sterlet|Sibirischer-Stör|Sibirisches-Bachneunauge|Sichling|Silberkarpfen|Silberlachs|Spiegelkarpfen|Steinschill|Sterlet|Stint|Südlicher-Neunstachliger-Stichling|Sumpfelritze|Svir-Felchen|Taimen|Tugun|Tunguska-Rotauge|Tyulka-Sardine|Ukrainisches-Bachneunauge|Valaam-Buckelmaräne|Vuoksi-Renke|Weißer-Amur|Weißlachs|Wels|Wildkarpfen|Wobla|Wolchow-Renke|Zährte|Zander|Zeilkarpfen|Zobel|Zope|Zwergmaräne"
 Listwaters:="Moskito-See|Elk-Lake|Windenbach|Alte-Festung|Fluss-Belaja|Kuori|Bärensee|Wolchow|Siwerskyj-Donez|FlussSura|Ladogasee|Bernsteinsee|Ladoga-Archipel|Achtuba|Kupfersee|Untere-Tunguska|Fluss-Jama"
 
-
 if(!FileExist("config.ini"))
 	FileAppend, [Info]`nVersion=1.0 `n[User]`nName=""`nID=""`n[Discord]`nHook="", version.ini
 
@@ -95,7 +94,7 @@ bait:=""
 mix:=""
 
 StartUI:
-	Gui Main:New
+	Gui, Main:New
 	Gui, Font, s8 bold, Tahoma
 	Gui, Main:Add, Text, x20 y20 w120 h20, Gewässer
 	Gui, Main:Add, DropDownList, x150 y18 w200 h40 r25 Choose%waters% vwaters, % Listwaters
@@ -189,12 +188,6 @@ delete:
 	Gosub, Startui
 return
 
-F5::
-MsgBox, Compress Test
-SetTimer, UpdateProgress, 100
-CompressPNG("Screen.png")
-Return
-
 screenit:
 	Gui, Main:Submit, NoHide
 	sleep 100
@@ -231,23 +224,7 @@ screenit2:
 	WinActivate, %guiwindow%
 Return
 
-UpdateProgress:
-    Schritt++
-    if (Schritt > Max) {
-        SetTimer, UpdateProgress, Off
-        Gui, Pro:Destroy
-        MsgBox, Fertig!
-        ExitApp
-    }
-    ShowProgress("Ladevorgang", Max, Schritt)
-return
-
-
 fireit:
-	if (FileExist("Screen.png"))
-		CompressPNG("Screen.png")
-	if (FileExist("Screen2.png"))
-		CompressPNG("Screen2.png")
 
 	GuiControlGet, waters, Main:
 	If(waters="")
@@ -304,6 +281,13 @@ fireit:
 	if(mix="")
 		mix:="n/a"
 
+	SetTimer, UpdateProgress, 50
+	if (FileExist("Screen.png"))
+		CompressPNG("Screen.png")
+	if (FileExist("Screen2.png"))
+		CompressPNG("Screen2.png")
+
+
 	valueText := FormatDiscordValue(mix)
 	FormatTime, TimeCurrent , YYYYMMDDHH24MISS , yyyy-M-ddTHH:mm:ss+0200
 	SendDiscordMessage(UName, TimeCurrent, waters,fish , cords, clip, hook, weather, speed, bitetime, bait, valueText, basis, extra1, extra2, extra3, extra4, flavour, rig)
@@ -323,9 +307,9 @@ fireit:
 	HTTP.SetRequestHeader("Cache-Control", "no-cache, no-store")
 	HTTP.SetRequestHeader("If-Modified-Since", "Sat, 1 Jan 2000 00:00:00 GMT")
 	HTTP.Send(PostData)
-	HTTP.WaitForResponse()
+;HTTP.WaitForResponse()
 
-	msgbox % HTTP.ResponseText
+;msgbox % HTTP.ResponseText
 
 Return
 
@@ -363,9 +347,9 @@ SendDiscordMessage(Uname, time, waters="",fish:="n/a", cords:="n/a", clip:="n/a"
 	Http.Open("POST", UserDiscordHook, False)
 	Http.SetRequestHeader("Content-Type", "application/json")
 	Http.Send(json)
-	HTTP.WaitForResponse()
+	;HTTP.WaitForResponse()
 
-	msgbox % HTTP.ResponseText
+	;msgbox % HTTP.ResponseText
 }
 ;////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -492,46 +476,72 @@ SetAllVars(c, f, cl, h, bt, w, s, b, e1, e2, e3, e4, fl, r, ba, m) {
 }
 
 CompressPNG(filePath) {
-    ; Pfad zur PNGQUANT.EXE im Unterordner "data"
-    exePath := A_ScriptDir . "\data\pngquant.exe"
+	; Pfad zur PNGQUANT.EXE im Unterordner "data"
+	exePath := A_ScriptDir . "\data\pngquant.exe"
 
-    ; Prüfen, ob pngquant.exe existiert
-    if !FileExist(exePath) {
-        MsgBox, 16, Fehler, pngquant.exe nicht gefunden im Ordner `data`.
-        return
-    }
+	; Prüfen, ob pngquant.exe existiert
+	if !FileExist(exePath) {
+		MsgBox, 16, Fehler, pngquant.exe nicht gefunden im Ordner `data`.
+		return
+	}
 
-    ; Zieldateiname (z. B. Bildname-fs8.png)
-    compressedFile := StrReplace(filePath, ".png", "-fs8.png")
+	; Zieldateiname (z. B. Bildname-fs8.png)
+	compressedFile := StrReplace(filePath, ".png", "-fs8.png")
 
-    ; pngquant ausführen
-    RunWait, %ComSpec% /c ""%exePath%" --force --output "%compressedFile%" "%filePath%"", , Hide
+	; pngquant ausführen
+	RunWait, %ComSpec% /c ""%exePath%" --force --output "%compressedFile%" "%filePath%"", , Hide
 
-    ; Wenn komprimierte Datei erfolgreich erstellt wurde → Original ersetzen
-    if FileExist(compressedFile) {
-        FileMove, %compressedFile%, %filePath%, 1
-    } else {
-        MsgBox, 48, Fehler, PNG-Komprimierung fehlgeschlagen bei:`n%filePath%
-    }
+	; Wenn komprimierte Datei erfolgreich erstellt wurde → Original ersetzen
+	if FileExist(compressedFile) {
+		FileMove, %compressedFile%, %filePath%, 1
+	} else {
+		MsgBox, 48, Fehler, PNG-Komprimierung fehlgeschlagen bei:`n%filePath%
+	}
 }
 
-showProgress(Titel, Max, Schritt) {
-	global MyProgress   ; Progress-Control sichtbar machen
-    static GuiErstellt := false
+; ===================================
+; Funktion für Ladebalken
+; Titel   = Fenster-Titel
+; Max     = maximale Schritte
+; Schritt = aktueller Schritt
+; Farbe   = Progressbar-Farbe (z. B. Red, Green, Blue, FF0000)
+ShowProgress(Titel, Max, Schritt, Farbe:="Blue") {
+	global MyProgress
+	static GuiErstellt := false
 
-    if (!GuiErstellt) {
-		Gui Pro:New
-        Gui, +AlwaysOnTop -SysMenu
-        Gui, Pro:Add, Progress, vMyProgress w300 h25
-        Gui, Pro:Show,, %Titel%
-        GuiErstellt := true
-    }
+	; Wenn GUI noch nicht erstellt → erstellen
+	if (!GuiErstellt) {
+		Gui, Pro:New
+		Gui, Pro:+AlwaysOnTop -SysMenu
+		Gui, Pro:Add, Progress, vMyProgress w300 h25
+		GuiControl, Pro:+Range0-100, MyProgress
+		GuiControl, Pro:+c%Farbe%, MyProgress
+		Gui, Pro:Show,, %Titel%
+		GuiErstellt := true
+	}
 
-    ; Wert berechnen und in Progressbar schreiben
-    Wert := Schritt * 100 / Max
-    GuiControl,, MyProgress, %Wert%
+	; Prozent berechnen
+	Prozent := Round(Schritt * 100 / Max)
 
-    ; Titel mit Prozent (korrekte Syntax!)
-    Prozent := Round(Wert)
-    Gui, Pro:Show,, % Titel " (" Prozent "%)"
+	; Fortschritt setzen
+	GuiControl, Pro:, MyProgress, %Prozent%
+
+	; Titel aktualisieren
+	Gui, Pro:Show,, % Titel " (" Prozent "%)"
+
+	; Wenn fertig → automatisch schließen
+	if (Schritt >= Max) {
+		Gui, Pro:Destroy
+		GuiErstellt := false
+		return true   ; Signal: fertig
+	}
+	return false      ; noch nicht fertig
 }
+
+UpdateProgress:
+	Schritt++
+	if (ShowProgress("Upload", Max, Schritt, "Green")) {
+		SetTimer, UpdateProgress, Off
+		Schritt:="0"
+	}
+return
