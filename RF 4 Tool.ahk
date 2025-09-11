@@ -34,7 +34,7 @@ scan.autoUpdate := 0
 
 SetTimer,timenow,500
 
-ListFish:="Aal|Aland|Albino-Gerahmter-Spiegelkarpfen|Albino-Lederkarpfen|Albino-Schuppenkarpfen|Albino-Spiegelkarpfen|Albino-Wels|Albino-Zeilkarpfen|Amurwels|Aral-Barbe|Arktische-Äsche|Arktische-Maräne|Atlantischer-Lachs|Bachforelle|Bachsaibling|Bachschmerle|Baikal-Maräne|Baltischer-Stör|Barbe|Barsch|Beluga-Stör|Brachse|Braschnikow-Hering|Buckellachs|Chereshnev-Saibling|Döbel|Dolly-Varden-Forelle|Donauhering|Don-Kaulbarsch|Dreistachliger-Stichling|Dryagin-Saibling|Europäische-Äsche|Fernöstliches-Neunauge|Fluss---Wandermuschel|Flusskrebs|Flussmuschel|Geister-Zeilkarpfen|Geister-Gerahmter-Spiegelkarpfen|Geister-Lederkarpfen|Geister-Schuppenkarpfen|Geister-Spiegelkarpfen|Gerahmter-Spiegelkarpfen|Giebel|Glatt-Stör|Goldener-Spiegelkarpfen|Goldkarpfen|Goldschleie|Grasfrosch|Große-Bodenrenke|Großmäuliger-Büffelfisch|Gründling|Güster|Hasel|Hecht|Japanischer-Saibling|Jungbrachse|Kaluga-Hausen|Kamtschatka-Regenbogenforelle|Karausche|Kaspi-Maifisch|Kaspineunauge|Kaspische-Forelle|Kaspischer-Schwarzrücken-Hering|Kaulbarsch|Keine-Daten-verfügbar|Keta-Lachs|Kleine-Bodenrenke|Kleine-Sibirische-Maräne|Klotzsaibling|Königslachs|Kuori-Felchen|Kürbiskernbarsch|Kutum|Ladoga-Lachs|Ladogasee-Felchen|Ladoga-Stör|Langnasen-Saugdöbel|Laube|Lederkarpfen|Lenok|Ludoga-Renke|Ludoga-Saibling|Marmorkarpfen|Muksun|Nase|Neiva|Nelma|Neunstachliger-Stichling|Ostbrasse|Ostsibirische-Äsche|Pazifisches-Neunauge|Peledmaräne|Persischer-Stör|Prosopium|Quappe|Rapfen|Regenbogenforelle|Regenbogenstint|Ripus-Maräne|Rotauge|Rotfeder|Rotlachs|Russischer-Stör|Scherg|Schläfergrundel|Schlammpeitzger|Schleie|Schuppenkarpfen|Schwarze-Felchen|Schwarzer-Amur|Schwarzer-Büffelfisch|Schwarzmeer-Beluga|Schwarzmeer-Kutum|Schwarzmeer-Seelaube|See-Elritze|Seeforelle|Seelaube|Seesaibling|Seesaibling-Kuorsky|Sewan-Forelle|Sibirische-Groppe|Sibirische-Plötze|Sibirischer-Gründling|Sibirischer-Hasel|Sibirischer-Sterlet|Sibirischer-Stör|Sibirisches-Bachneunauge|Sichling|Silberkarpfen|Silberlachs|Spiegelkarpfen|Steinschill|Sterlet|Stint|Südlicher-Neunstachliger-Stichling|Sumpfelritze|Svir-Felchen|Taimen|Tugun|Tunguska-Rotauge|Tyulka-Sardine|Ukrainisches-Bachneunauge|Valaam-Buckelmaräne|Vuoksi-Renke|Weißer-Amur|Weißlachs|Wels|Wildkarpfen|Wobla|Wolchow-Renke|Zährte|Zander|Zeilkarpfen|Zobel|Zope|Zwergmaräne"
+ListFish:="Aal|Aalmutter|Adlerfisch|Aland|Albino-Gerahmter-Spiegelkarpfen|Albino-Barbe|Albino-Graskarpfen|Albino-Lederkarpfen|Albino-Schuppenkarpfen|Albino-Spiegelkarpfen|Albino-Wels|Albino-Zeilkarpfen|Alfonsino|Aligatorhecht|Amerikanischer-Maifisch|Amurwels|Aral-Barbe|Arktische-Äsche|Arktische-Maráne|Arktischer-Rochen|Atlantischer-Hering|Atlantischer-Kabeljau|Atlantischer-Lachs|Augenfleckenkammbarsch|Auster|Bachforelle|Bachsaibling|Bachschmerle|Baikal-Maráne|Baltischer-Stör|Barbe|Beluga-Stör|Blauer-Seewolf|Blauer-Sonnenbarsch|Blauer-Wittling|Blauflossen-Thunfisch|Blauleng|Brachse|Brachymystax|Braschnikow-Hering|Buckellachs|C2-SuperFreak|Chereshnev-Saibling|Conger|Dinkelsbühler-Lederkarpfen|Dinkelsbühler-Spiegelkarpfen|Dinkelsbühler-Zeilenkarpfen|Döbel|Doggerscharbe|Dolly-Varden-Forelle|Don-Kaulbarsch|Donauhering|Dornhai|Dreistachliger-Stichling|Dryagin-Saibling|Esmarks-Aalmutter|Europäische-Äsche|Europäische-Sardine|Europäischer-Seehecht|F1-Karpfen|Felsenbarsch|Fernöstliches-Neunauge|Flachkopfwels|Fluss-Wandermuschel|Flussbarsch|Flusskrebs|Flussmuschel|Forellenbarsch|Fussballfisch|Gefleckter-Knochenhecht|Gefleckter-Seewolf|Geister-Zeilkarpfen|Geister-Gerahmter-Spiegelkarpfen|Geister-Lederkarpfen|Geister-Schuppenkarpfen|Geister-Spiegelkarpfen|Gemeine-Miesmuschel|Gemeiner-Kalmar|Gepunkteter-Barsch|Gerahmter-Spiegelkarpfen|Gestreifter-Seewolf|Getüpfelter-Gabelwels|Gewöhlicher-Leng|Giebel|Glatt-Stör|Goldener-Spiegelkarpfen|Goldkarpfen|Goldschleie|Gotteslachs|Grasfrosch|Grenadierfisch|Grönlandhai|Große-Bodenrenke|Großmäuliger-Büffelfisch|Gründling|Güster|Hasel|Hecht|Heilbutt|Heringshai|Hi-Utsuri|Isländische-Kammmuschel|Japanischer-Saibling|Kaluga-Hausen|Kamtschatka-Regenbogenforelle|Karausche|Kaspi-Maifisch|Kaspineunauge|Kaspische-Forelle|Kaspischer-Schwarzrücken-Hering|Kaulbarsch|Keta-Lachs|Kleine-Bodenrenke|Kleine-Sibirische-Maráne|Kleiner-Rotbarsch|Kliesche|Klotzsaibling|Kohaku|Köhler|Königskrabbe|Königslachs|Kragenhai|Kuori-Felchen|Kürbiskernbarsch|Kutum|Kvolsdorfsky-Schleie|Ladoga-Lachs|Ladoga-Stör|Ladogasee-Felchen|Langnasen-Saugdöbel|Langohr-Aalmutter|Laube|Lederkarpfen|Lenok|Ludoga-Renke|Ludoga-Saibling|Lumb|Makrele|Makrelenhecht|Mameshibori-Goshiki|Marmorkarpfen|Masu-Lachs|Masu-Lachs-(sesshaft)|Midori-Goi|Mongolische-Rotfeder|Muksun|Narumi-Asagi|Nase|Neiva|Nelma|Neunstachliger-Stichling|Orenji-Ogon|Ostbrasse|Ostrog-Felchen|Ostsibirische-Äsche|Pazifisches-Neunauge|Peledmaráne|Persischer-Stör|Prosopium|Quappe|Rapfen|Regenbogenforelle|Regenbogenstint|Riesenhai|Ripus-Maráne|Rotauge|Rotbarsch|Rotfeder|Rotlachs|Rotohr-Sonnenbarsch|Russischer-Stör|Schellfisch|Scherg|Schläfergrundel|Schlammpeitzger|Schleie|Scholle|Schuppenkarpfen|Schwarzbarsch|Schwarze-Felchen|Schwarzer-Amur|Schwarzer-Büffelfisch|Schwarzer-Crappie|Schwarzer-Degenfisch|Schwarzer-Heilbutt|Schwarzfisch|Schwarzmeer-Beluga|Schwarzmeer-Kutum|Schwarzmeer-Seelaube|Schwertfisch|See-Elritze|Seeforelle|Seehase|Seekatze|Seelaube|Seesaibling|Seesaibling-Kuorsky|Seeskorpion|Seeteufel|Sewan-Forelle|Sibirische-Groppe|Sibirische-Plötze|Sibirischer-Gründling|Sibirischer-Hasel|Sibirischer-Sterlet|Sibirischer-Stör|Sibirisches-Bachneunauge|Sichling|Silberkarpfen|Silberlachs|Spiegelkarpfen|Steinbutt|Steinköhler|Steinschill|Sterlet|Sternrochen|Stint|Streifenbarsch|Südlicher-Neunstachliger-Stichling|Sumpfelritze|Süßwassertrommler|Svir-Felchen|Taimen|Taschenkrebs|Tiefenrotbarsch|Tugun|Tunguska-Rotauge|Tyulka-Sardine|Ugui|Ukrainisches-Bachneunauge|Valaam-Buckelmaráne|Vuoksi-Renke|Walleye|Warmouth|Weißbarsch|Weißer-Amur|Weißer-Crappie|Weißlachs|Wels|Wildkarpfen|Wittling|Wobla|Wolchow-Renke|Wrackbarsch|Yotsushiro|Zährte|Zander|Zeilkarpfen|Zobel|Zope|Zwergmaráne"
 Listwaters:="Moskito-See|Elk-Lake|Windenbach|Alte-Festung|Fluss-Belaja|Kuori|Bärensee|Wolchow|Siwerskyj-Donez|FlussSura|Ladogasee|Bernsteinsee|Ladoga-Archipel|Achtuba|Kupfersee|Untere-Tunguska|Fluss-Jama"
 
 if(!FileExist("config.ini"))
@@ -95,7 +95,8 @@ mix:=""
 
 StartUI:
 	Gui, Main:New
-	Gui, Font, s8 bold, Tahoma
+	Gui, Main:Font, s8 bold, Tahoma
+	;Gui, Main:Color, 0x4c4f4d
 	Gui, Main:Add, Text, x20 y20 w120 h20, Gewässer
 	Gui, Main:Add, DropDownList, x150 y18 w200 h40 r25 Choose%waters% vwaters, % Listwaters
 	Gui, Main:Add, Text, x20 y50 w120 h20, Uhrzeit
@@ -105,7 +106,7 @@ StartUI:
 	Gui, Main:Add, Edit, x150 y68 w200 h20 Center vcords, %cords%
 
 	Gui, Main:Add, Text, x20 y90 w120 h20, Fischart
-	Gui, Main:Add, DropDownList, x150 y88 w200 h20 R25 Choose%fish% vfish, % Listfish
+	Gui, Main:Add, ComboBox, x150 y88 w200 h20 R25 Choose%fish% vfish, % Listfish
 
 	Gui, Main:Add, Text, x20 y110 w120 h20, Clip
 	Gui, Main:Add, Edit, x150 y108 w200 h20 Center vclip, %clip%
@@ -195,8 +196,7 @@ screenit:
 	WinGetPos, X, Y, Width, Height, %a_window%,
 	scan.update()
 	scan.SaveImage("Screen", X, Y, Width, Height)
-	;CompressPNG("Screen.png")
-	;MsgBox,,, % "Screenshot taken", 1
+
 	GuiControl,, screen , Screen.png
 	Gui, Main:Destroy
 	sleep 100
@@ -213,8 +213,6 @@ screenit2:
 	WinGetPos, X, Y, Width, Height, %a_window%,
 	scan.update()
 	scan.SaveImage("Screen2", X, Y, Width, Height)
-	;CompressPNG("Screen2.png")
-	;MsgBox,,, % "Screenshot taken", 1
 	GuiControl,, screen , Screen2.png
 	Gui, Main:Destroy
 	sleep 100
@@ -286,7 +284,6 @@ fireit:
 		CompressPNG("Screen.png")
 	if (FileExist("Screen2.png"))
 		CompressPNG("Screen2.png")
-
 
 	valueText := FormatDiscordValue(mix)
 	FormatTime, TimeCurrent , YYYYMMDDHH24MISS , yyyy-M-ddTHH:mm:ss+0200
@@ -499,12 +496,6 @@ CompressPNG(filePath) {
 	}
 }
 
-; ===================================
-; Funktion für Ladebalken
-; Titel   = Fenster-Titel
-; Max     = maximale Schritte
-; Schritt = aktueller Schritt
-; Farbe   = Progressbar-Farbe (z. B. Red, Green, Blue, FF0000)
 ShowProgress(Titel, Max, Schritt, Farbe:="Blue") {
 	global MyProgress
 	static GuiErstellt := false
